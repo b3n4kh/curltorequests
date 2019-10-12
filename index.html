@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Utility for converting curl commands to code">
+    <meta name="author" content="Nick Carneiro">
+
+    <title>Convert cURL command syntax to Python requests, Ansible URI, Node.js, R, PHP, Strest, Go, Dart, JSON, and Rust code</title>
+    <link href="/styles/app.css" rel="stylesheet">
+  </head>
+  <body>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h3 class="text-muted hidden-xs">Convert curl syntax to Python, Ansible URI, Node.js, R, PHP, Strest, Go, Dart, JSON, Rust</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6">
+        <h2>curl command</h2>
+        <textarea id="curl-code" class="code" placeholder="Paste a curl command here"></textarea>
+        <div>
+          Examples:
+          <a id="get-example" href="#">GET</a>
+          -
+          <a id="post-example" href="#">POST</a>
+          -
+          <a id="basic-auth-example" href="#">Basic Auth</a>
+
+        </div>
+
+      </div>
+      <div class="col-sm-6">
+        <h2 id="generated-code-title">Python requests</h2>
+        <div style="display: none;" id="issue-promo">If your syntax is correct, create an
+          <a href="https://github.com/NickCarneiro/curlconverter/issues/new" target="_blank">issue</a>.
+        </div>
+        <textarea id="generated-code" class="code"></textarea>
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12 button-container">
+        <label for="language">
+          Language
+        </label>
+        <select class="form-control" id="language">
+          <option value="ansible">Ansible</option>
+          <option value="dart">Dart</option>
+          <option value="go">Go</option>
+          <option value="json">JSON</option>
+          <option value="node">Node.js</option>
+          <option value="php">PHP</option>
+          <option value="python" selected="selected">Python</option>
+          <option value="r">R</option>
+          <option value="rust">Rust</option>
+          <option value="strest">Strest</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="row extra-padding">
+      <div class="col-lg-4">
+        <h3>Get a curl command from Chrome</h3>
+        <ul>
+          <li>1) Open the network tab in Chrome DevTools (Cmd + Opt + I)</li>
+          <li>2) Control-click a request and navigate to "Copy as cURL".</li>
+          <li>3) Paste it in the curl command box.</li>
+        </ul>
+      </div>
+      <div class="col-lg-6">
+        <img class="screenshot" src="images/newscreenshot.png" srcset="images/newscreenshot@2x.png 2x" alt="screenshot of chrome devtools">
+      </div>
+    </div>
+  </div>
+  </body>
+</html>
